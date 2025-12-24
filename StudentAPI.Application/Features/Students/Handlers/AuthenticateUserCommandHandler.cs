@@ -26,7 +26,6 @@ namespace StudentAPI.Application.Features.Students.Handlers
             if (user == null || user.Password != request.Password)
                 return null;
 
-            //var userPermissions = await _userPermissionRepository.GetByUserIdAsync(user.Id);
             var token = _tokenService.GenerateToken(user);
             return new AuthenticationResponse(token);
         }
