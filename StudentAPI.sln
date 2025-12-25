@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36401.2 d17.14
+VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAPI.API", "StudentAPI.API\StudentAPI.API.csproj", "{E8AD17EF-4738-4297-99C7-7F88BE1A7F7B}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAPI.Application", "StudentAPI.Application\StudentAPI.Application.csproj", "{4748A419-5AA1-4C1E-B4DD-F5B6E997F3FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAPI.Infrastructure", "StudentAPI.Infrastructure\StudentAPI.Infrastructure.csproj", "{A6950F9F-962D-4788-9026-8DCB70421138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAPI.Application.Tests", "StudentAPI.Application.Tests\StudentAPI.Application.Tests.csproj", "{4CCD640E-32AD-4122-8768-B071E79332D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A6950F9F-962D-4788-9026-8DCB70421138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6950F9F-962D-4788-9026-8DCB70421138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6950F9F-962D-4788-9026-8DCB70421138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CCD640E-32AD-4122-8768-B071E79332D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCD640E-32AD-4122-8768-B071E79332D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CCD640E-32AD-4122-8768-B071E79332D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CCD640E-32AD-4122-8768-B071E79332D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
