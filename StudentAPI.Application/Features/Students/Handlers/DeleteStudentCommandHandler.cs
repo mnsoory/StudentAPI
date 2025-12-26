@@ -10,12 +10,10 @@ namespace StudentAPI.Application.Features.Students.Handlers
     public class DeleteStudentCommandHandler : IRequestHandler<DeleteStudentCommand, bool>
     {
         private readonly IStudentRepository _studentRepository;
-        private readonly IMapper _mapper;
 
-        public DeleteStudentCommandHandler(IStudentRepository studentRepository, IMapper mapper)
+        public DeleteStudentCommandHandler(IStudentRepository studentRepository)
         {
             _studentRepository = studentRepository;
-            _mapper = mapper;
         }
 
         public async Task<bool> Handle(DeleteStudentCommand command, CancellationToken cancellationToken)
