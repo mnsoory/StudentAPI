@@ -1,0 +1,38 @@
+# Services
+services:
+  studentapi.api:
+    image: ${DOCKER_REGISTRY-}studentapiapi
+    build:
+      context: .
+      dockerfile: StudentAPI.API/Dockerfile
+    ports:
+        - "9090:8080"
+    networks:
+        - net1
+    depends_on:
+        - sqlserver
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=Student_DB;User Id=sa;Password=@@abc123;Trust Server Certificate=true
+
+
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    networks: 
+        - net1
+    hostname: sqlserver
+    volumes:
+        - sqldata:/var/opt/mssql
+    environment:
+        - ACCEPT_EULA=Y
+        - MSSQL_SA_PASSWORD=@@abc123
+  
+# Networks
+networks:
+  net1:
+    driver: bridge
+
+# Volumes
+volumes:
+  sqldata:
